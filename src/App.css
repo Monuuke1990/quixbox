@@ -34,6 +34,7 @@ body{background:linear-gradient(to right, #000046, #1CB5E0)}
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
+
 .btn-next{
   padding: 10px;
   border: gray;
@@ -48,7 +49,18 @@ body{background:linear-gradient(to right, #000046, #1CB5E0)}
     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+@media (max-width:767px){
+  .box div:hover {
+  
+    background:transparent;
+    
+    padding:0px;
+    box-shadow: none;
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+  }
 
+}
 
 
 
