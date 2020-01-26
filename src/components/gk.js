@@ -75,47 +75,46 @@ export default class generalknowledge extends Component {
     if (quizend) {
       return (
         <div className="box">
-        <div>
-          <h1>Whoooohoooo!</h1>
-          <h2>Game over </h2>
-          {/* <h2>Game over final score is {this.state.score} points</h2> */}
-          <p>The correct answer was:</p>
-          <ul>{QuizData.map((item, index) => (
-            <li key={index}>{item.answer}</li>
-          ))}</ul>
-        </div>
+          <div>
+            <h1>Whoooohoooo!</h1>
+            <h2>Game over final score is {this.state.score} points</h2>
+            <p>The correct answer was:</p>
+            <ul>{QuizData.map((item, index) => (
+              <li key={index}>{item.answer}</li>
+            ))}</ul>
+          </div>
         </div>
       );
     }
     return (
       <div className="box">
-       
-  
+
+
         <div>
-              <h1>Quizbox</h1>
-              <h2>Let's have Fun!!!!!!!!</h2>
-        <h1>{quetions}</h1>
-        {/* <span>{`Questions ${currentQuetion} out of ${QuizData.length 
-          - 1} `}</span> */}
-        {options.map(option => (
-          <p
-            key={option.id}
-            className={`ui floating message ${userAnswer === option ? "selected" : null}`}
-            onClick={() => this.checkAnswer(option)}
-          >
-            {option}
-          </p>
-        ))}
-        <p />
-        {currentQuetion < QuizData.length - 1 && (
-          <button disabled={this.state.disabled} onClick={this.nextquestion} className="btn-next">
-            Next
+          <h1>Quizbox</h1>
+          <h2>Let's have Fun!!!!!!!!</h2>
+          <h1>{quetions}</h1>
+          <span>{`Questions ${currentQuetion + 1} out of ${QuizData.length
+            } `}</span>
+          {options.map(option => (
+            <p
+              key={option.id}
+              className={`ui floating message ${userAnswer === option ? "selected" : null}`}
+              onClick={() => this.checkAnswer(option)}
+            >
+              {option}
+            </p>
+          ))}
+          <p />
+          {currentQuetion < QuizData.length - 1 && (
+            <button disabled={this.state.disabled} onClick={this.nextquestion} className="btn-next">
+              Next
           </button>
-        )}
-        {currentQuetion === QuizData.length - 1 && (
-          <button onClick={this.finishquestion} className="btn-next">Finish</button>
-        )}
-      </div>
+          )}
+          {currentQuetion === QuizData.length - 1 && (
+            <button onClick={this.finishquestion} className="btn-next">Finish</button>
+          )}
+        </div>
       </div>
     );
   }
