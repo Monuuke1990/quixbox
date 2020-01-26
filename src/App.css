@@ -59,8 +59,8 @@ body{background:linear-gradient(to right, #000046, #1CB5E0)}
     
     padding:0px;
     box-shadow: none;
-    -webkit-transform: scale(1.25, 1.25);
-    transform: scale(1.25, 1.25);
+    -webkit-transform: none;
+    transform: none;
   }
 
 }
