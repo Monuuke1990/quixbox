@@ -1,0 +1,67 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+ul li{
+list-style:none;
+color: #fff;
+padding: 6px 10px;
+border: 1px solid #fff;
+margin: 5px;
+}
+.selected{
+background:linear-gradient(to right, #56ab2f  , #a8e063) !important;
+color: #fff !important;
+}
+
+body{background:linear-gradient(to right, #000046, #1CB5E0)}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.box h1, .box span,.box h2,.box p{
+  color: #fff;
+}
+.box div:hover {
+  
+  background:linear-gradient(to right, #3494E6, #EC6EAD);
+  
+  padding: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+.btn-next{
+  padding: 10px;
+  border: gray;
+  width: 100%;
+  
+}
+.box div{
+    position: relative;
+    border-radius: 5px;
+    -webkit-transform: translateY(0);
+    -webkit-transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
